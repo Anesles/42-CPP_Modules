@@ -6,7 +6,7 @@
 /*   By: brumarti <brumarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/28 15:59:53 by brumarti          #+#    #+#             */
-/*   Updated: 2023/09/19 17:13:16 by brumarti         ###   ########.fr       */
+/*   Updated: 2023/09/19 18:42:07 by brumarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,23 @@ string	read_string(string ask_str)
 	return (input);	
 }
 
+int	valid_number(string number)
+{
+	int	i = 0;
+	
+	while (number[i])
+	{
+		if (!isdigit(number[i]))
+		{
+			cout << "Invalid number, try again." << endl;
+			return (1);
+		}
+		i++;
+	}
+	return (0);
+	
+}
+
 PhoneBook::PhoneBook()
 {
 	index = 0;
@@ -51,6 +68,8 @@ void	PhoneBook::addContact()
 	temp = read_string("Nickname: ");
 	new_contact.setNickname(temp);
 	temp = read_string("Number: ");
+	while (valid_number(temp) != 0)
+		temp = read_string("Number: ");
 	new_contact.setPhoneNumber(temp);
 	temp = read_string("Darkest secret: ");
 	new_contact.setDarkSecret(temp);
@@ -101,20 +120,27 @@ void	PhoneBook::searchContacts()
 	while (1)
 	{	
 		cout << "Index: ";
-		cin >> index;
-		cin.clear();
-		cin.ignore();
-		if (index >= count || index < 0)
-			cout << "Index overflow, try again." << endl;
+		if (cin >> index)
+		{
+			if (index >= 0 && index < count)
+				break;
+			else
+				cout << "Index out of range. Try again." << endl;
+		}
 		else
-			break;
+		{
+			cout << "Invalid input. Try again." << endl;
+			cin.clear();
+			cin.ignore(1000000, '\n');
+		}
 	}
+	
 	cout << "Contact information:" << endl
 		 << "   First name: " << contacts[index].getFirstName() << endl
 		 << "   Last name: " << contacts[index].getLastName() << endl
 		 << "   Nickname: " << contacts[index].getNickname() << endl
 		 << "   Phone number: " << contacts[index].getPhoneNumber() << endl
 		 << "   Darkest secret: " << contacts[index].getDarkSecret() << endl;
-	
+	cin.ignore(1000000, '\n');
 	return ;
 }
