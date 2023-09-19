@@ -6,7 +6,7 @@
 /*   By: brumarti <brumarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/28 11:28:47 by brumarti          #+#    #+#             */
-/*   Updated: 2023/07/28 16:49:43 by brumarti         ###   ########.fr       */
+/*   Updated: 2023/09/19 17:08:02 by brumarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,16 +46,18 @@ int main(void)
 	initial_print();
 	while (1)
 	{
-		cin >> option;
+		cout << "Phonebook> ";
+		getline(cin, option);
 		if (option == "ADD")
 			pb.addContact();
 		else if (option == "SEARCH")
 			pb.searchContacts();
-		else
+		else if (option == "EXIT")
 		{
 			cout << "Have a nice day ! 👋";
 			break ;
 		}
+		option.clear();
 	}
 	return (0);
 }

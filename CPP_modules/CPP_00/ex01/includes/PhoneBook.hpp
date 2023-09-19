@@ -6,7 +6,7 @@
 /*   By: brumarti <brumarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/28 12:04:32 by brumarti          #+#    #+#             */
-/*   Updated: 2023/07/28 16:46:31 by brumarti         ###   ########.fr       */
+/*   Updated: 2023/09/19 16:45:31 by brumarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,10 @@
 # define PHONEBOOK_HPP
 
 # include "Contact.hpp"
+# include <iostream>
+# include <iomanip>
 
-# define MAX_CONTACTS 8
+# define MAX_CONTACTS 2
 
 class PhoneBook
 {
@@ -27,6 +29,7 @@ class PhoneBook
 
 	private:
 		int		count;
+		int		index;
 		Contact	contacts[MAX_CONTACTS];
 };
 

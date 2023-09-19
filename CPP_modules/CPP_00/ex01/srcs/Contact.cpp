@@ -6,7 +6,7 @@
 /*   By: brumarti <brumarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/28 15:59:59 by brumarti          #+#    #+#             */
-/*   Updated: 2023/07/28 16:09:11 by brumarti         ###   ########.fr       */
+/*   Updated: 2023/09/19 16:15:31 by brumarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	Contact::setNickname(std::string new_nick)
 	nickname = new_nick;
 }
 
-void	Contact::setPhoneNumber(int new_number)
+void	Contact::setPhoneNumber(std::string new_number)
 {
 	phone_number = new_number;
 }
@@ -51,7 +51,7 @@ std::string	Contact::getNickname(void)
 	return nickname;
 }
 
-int			Contact::getPhoneNumber(void)
+std::string	Contact::getPhoneNumber(void)
 {
 	return phone_number;
 }
