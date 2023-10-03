@@ -6,7 +6,7 @@
 /*   By: brumarti <brumarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/28 12:04:32 by brumarti          #+#    #+#             */
-/*   Updated: 2023/09/19 16:45:31 by brumarti         ###   ########.fr       */
+/*   Updated: 2023/10/03 17:52:26 by brumarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <iostream>
 # include <iomanip>
 
-# define MAX_CONTACTS 2
+# define MAX_CONTACTS 8
 
 class PhoneBook
 {
