@@ -1,36 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: brumarti <brumarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/28 12:04:32 by brumarti          #+#    #+#             */
-/*   Updated: 2023/10/03 17:52:26 by brumarti         ###   ########.fr       */
+/*   Created: 2023/10/03 19:53:25 by brumarti          #+#    #+#             */
+/*   Updated: 2023/10/03 20:04:18 by brumarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-# define PHONEBOOK_HPP
+#include "Zombie.hpp"
 
-# include "Contact.hpp"
-# include <iostream>
-# include <iomanip>
-
-# define MAX_CONTACTS 8
-
-class PhoneBook
+int main(void)
 {
-	public:
-		PhoneBook();
+    int n = 35;
+    Zombie *horde = zombieHorde(n, "Jorge");
 
-		void	addContact();
-		void	searchContacts();
-
-	private:
-		int		count;
-		int		index;
-		Contact	contacts[MAX_CONTACTS];
-};
-
-#endif
+    for (int i = 0; i < n ; i++)
+        horde[i].announce();
+    delete[] horde;
+}

@@ -1,36 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   randomChump.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: brumarti <brumarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/28 12:04:32 by brumarti          #+#    #+#             */
-/*   Updated: 2023/10/03 17:52:26 by brumarti         ###   ########.fr       */
+/*   Created: 2023/10/03 19:03:39 by brumarti          #+#    #+#             */
+/*   Updated: 2023/10/03 19:43:01 by brumarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-# define PHONEBOOK_HPP
+#include "Zombie.hpp"
 
-# include "Contact.hpp"
-# include <iostream>
-# include <iomanip>
-
-# define MAX_CONTACTS 8
-
-class PhoneBook
+void    randomChump(std::string name)
 {
-	public:
-		PhoneBook();
-
-		void	addContact();
-		void	searchContacts();
-
-	private:
-		int		count;
-		int		index;
-		Contact	contacts[MAX_CONTACTS];
-};
-
-#endif
+    Zombie a;
+    a.setName(name);
+    a.announce();
+}

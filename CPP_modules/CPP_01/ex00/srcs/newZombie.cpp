@@ -1,36 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   newZombie.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: brumarti <brumarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/28 12:04:32 by brumarti          #+#    #+#             */
-/*   Updated: 2023/10/03 17:52:26 by brumarti         ###   ########.fr       */
+/*   Created: 2023/10/03 18:57:36 by brumarti          #+#    #+#             */
+/*   Updated: 2023/10/03 19:42:34 by brumarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-# define PHONEBOOK_HPP
+#include "Zombie.hpp"
 
-# include "Contact.hpp"
-# include <iostream>
-# include <iomanip>
-
-# define MAX_CONTACTS 8
-
-class PhoneBook
+Zombie* newZombie(std::string name)
 {
-	public:
-		PhoneBook();
-
-		void	addContact();
-		void	searchContacts();
-
-	private:
-		int		count;
-		int		index;
-		Contact	contacts[MAX_CONTACTS];
-};
-
-#endif
+    Zombie* _newZombie = new Zombie;
+    _newZombie->setName(name);
+    return (_newZombie);
+}

@@ -1,36 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   zombieHorde.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: brumarti <brumarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/28 12:04:32 by brumarti          #+#    #+#             */
-/*   Updated: 2023/10/03 17:52:26 by brumarti         ###   ########.fr       */
+/*   Created: 2023/10/03 19:52:30 by brumarti          #+#    #+#             */
+/*   Updated: 2023/10/03 19:57:57 by brumarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-# define PHONEBOOK_HPP
+#include "Zombie.hpp"
 
-# include "Contact.hpp"
-# include <iostream>
-# include <iomanip>
-
-# define MAX_CONTACTS 8
-
-class PhoneBook
+Zombie* zombieHorde(int N, std::string name)
 {
-	public:
-		PhoneBook();
-
-		void	addContact();
-		void	searchContacts();
-
-	private:
-		int		count;
-		int		index;
-		Contact	contacts[MAX_CONTACTS];
-};
-
-#endif
+    Zombie *horde = new Zombie[N];
+    for (int i = 0; i < N; i++)
+        horde[i].setName(name);
+    return (horde);
+}
