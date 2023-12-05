@@ -15,16 +15,7 @@
 
 int		main( void ) {
 
-	Account t(12), z(100);
-	Account::displayAccountsInfos();
-	t.displayStatus();
-	z.displayStatus();
-	t.makeDeposit(10);
-	z.makeDeposit(1337);
-	Account::displayAccountsInfos();
-	t.displayStatus();
-	z.displayStatus();
-	/* typedef std::vector<Account::t>							  accounts_t;
+	typedef std::vector<Account::t>							  accounts_t;
 	typedef std::vector<int>								  ints_t;
 	typedef std::pair<accounts_t::iterator, ints_t::iterator> acc_int_t;
 
@@ -69,7 +60,7 @@ int		main( void ) {
 	Account::displayAccountsInfos();
 	std::for_each( acc_begin, acc_end, std::mem_fun_ref( &Account::displayStatus ) );
 
-	return 0; */
+	return 0;
 }
 
 

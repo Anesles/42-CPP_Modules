@@ -6,7 +6,7 @@
 /*   By: brumarti <brumarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 16:35:36 by brumarti          #+#    #+#             */
-/*   Updated: 2023/12/04 17:37:57 by brumarti         ###   ########.fr       */
+/*   Updated: 2023/12/05 15:00:44 by brumarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -123,7 +123,36 @@ void	Account::makeDeposit(int deposit)
 				<< std::endl;
 }
 
+int	Account::checkAmount( void ) const
+{
+	if (this->_amount < 0)
+		return (1);
+	return (0);
+}
+
 bool	Account::makeWithdrawal(int withdrawal)
 {
+	int	p_amount = this->_amount;
+
+	this->_amount -= withdrawal;
+	Account::_displayTimestamp();
+	std::cout 	<< "index:" << this->_accountIndex << ';'
+				<< "p_amount:" << p_amount << ';';
+	if (checkAmount())
+	{
+		this->_amount = p_amount;
+		std::cout << "withdrawal:refused" << std::endl;
+		return (false);
+	}
 	
+	this->_nbWithdrawals++;
+	
+	Account::_totalNbWithdrawals++;
+	Account::_totalAmount -= withdrawal;
+	
+	std::cout 	<< "withdrawal:" << withdrawal << ';'
+				<< "amount:" << this->_amount << ';'
+				<< "nb_withdrawals:" << this->_nbWithdrawals
+				<< std::endl;
+	return (true);
 }
