@@ -6,7 +6,7 @@
 #    By: brumarti <brumarti@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/03 18:25:25 by brumarti          #+#    #+#              #
-#    Updated: 2023/12/05 16:14:23 by brumarti         ###   ########.fr        #
+#    Updated: 2023/12/13 19:05:56 by brumarti         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ VPATH = srcs
 
 NAME = ex03
 
-GENERAL = HumanA Humanb Weapon
+GENERAL = HumanA HumanB Weapon
 
 SRC = $(addsuffix .cpp, $(GENERAL)) \
 		main.cpp

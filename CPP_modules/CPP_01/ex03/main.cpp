@@ -6,11 +6,10 @@
 /*   By: brumarti <brumarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/05 16:12:48 by brumarti          #+#    #+#             */
-/*   Updated: 2023/12/05 16:13:26 by brumarti         ###   ########.fr       */
+/*   Updated: 2023/12/13 19:33:01 by brumarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Weapon.h"
 #include "HumanA.h"
 #include "HumanB.h"
 

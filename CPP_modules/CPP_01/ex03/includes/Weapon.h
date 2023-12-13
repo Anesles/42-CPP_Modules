@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanB.h                                           :+:      :+:    :+:   */
+/*   Weapon.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: brumarti <brumarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/05 16:10:24 by brumarti          #+#    #+#             */
-/*   Updated: 2023/12/05 16:11:48 by brumarti         ###   ########.fr       */
+/*   Created: 2023/12/13 19:10:26 by brumarti          #+#    #+#             */
+/*   Updated: 2023/12/13 19:34:58 by brumarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string>
-#include "Weapon.h"
+#pragma once
+#ifndef WEAPON_H
+# define WEAPON_H
 
-class HumanB
+# include <string>
+
+class Weapon
 {
-public:
-	HumanB(std::string name);
-	~HumanB();
-	void	attack(void);
-	void	setWeapon(Weapon weapon);
-	Weapon	getWeapon(void);
-private:
-	std::string	_name;
-	Weapon		_weapon;
+	public:
+		Weapon(std::string type);
+		~Weapon(void);
+		const std::string& getType(void);
+		void setType(std::string type);
+	private:
+		std::string _type;
 };
+#endif
