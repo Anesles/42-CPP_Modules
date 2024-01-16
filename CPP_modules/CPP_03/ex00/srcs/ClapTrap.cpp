@@ -6,7 +6,7 @@
 /*   By: brumarti <brumarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 14:51:15 by brumarti          #+#    #+#             */
-/*   Updated: 2024/01/16 16:12:56 by brumarti         ###   ########.fr       */
+/*   Updated: 2024/01/16 16:31:33 by brumarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ ClapTrap &ClapTrap::operator=(ClapTrap const & other) {
 void ClapTrap::attack(const std::string& target){
 	if (this->_hitp > 0 && this->_enep > 0)
 	{
-		std::cout << "ClapTrap " << this->_name << " attcks " << target << ", causing " << this->_atad << " points of damage!\n";
+		std::cout << "ClapTrap " << this->_name << " attacks " << target << ", causing " << this->_atad << " points of damage!\n";
 		this->_enep--;
 	}
 	else
@@ -71,6 +71,19 @@ void ClapTrap::takeDamage(unsigned int amount) {
 }
 
 void ClapTrap::beRepaired(unsigned amount) {
-	std::cout << "ClapTrap " << this->_name << " got " << amount << "energy points !\n";
-	this->_enep += amount;
+	if (this->_hitp > 0 && this->_enep > 0){
+		std::cout << "ClapTrap " << this->_name << " got " << amount << "energy points !\n";
+		this->_enep += amount;
+	}
+	else
+	{
+		std::cout << "ClapTrap " << this->_name;
+		if (this->_hitp <= 0)
+			std::cout << " has no hipoints left";
+		if (this->_hitp <= 0 && this->_enep <= 0)
+			std::cout << " and";
+		if(this->_enep <= 0)
+			std::cout << " has no energy points left";
+		std::cout << ".\n";
+	}
 }
