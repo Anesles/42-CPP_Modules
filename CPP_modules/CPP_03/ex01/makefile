@@ -6,7 +6,7 @@
 #    By: brumarti <brumarti@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/16 14:41:55 by brumarti          #+#    #+#              #
-#    Updated: 2024/01/16 16:44:10 by brumarti         ###   ########.fr        #
+#    Updated: 2024/01/16 17:22:15 by brumarti         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,9 +15,9 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98
 INCLUDE = -I./includes
 VPATH = srcs
 
-NAME = ex00
+NAME = ex01
 
-GENERAL = ClapTrap
+GENERAL = ClapTrap ScavTrap
 
 SRC = $(addsuffix .cpp, $(GENERAL)) \
 		main.cpp

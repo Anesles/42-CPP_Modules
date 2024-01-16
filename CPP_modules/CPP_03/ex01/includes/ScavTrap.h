@@ -1,29 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScavTrap.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: brumarti <brumarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/16 14:42:56 by brumarti          #+#    #+#             */
-/*   Updated: 2024/01/16 17:21:03 by brumarti         ###   ########.fr       */
+/*   Created: 2024/01/16 16:46:34 by brumarti          #+#    #+#             */
+/*   Updated: 2024/01/16 17:14:06 by brumarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.h"
+#include "ClapTrap.h"
 
-int	main(void) {
-	ScavTrap C1;
-	ScavTrap C2("Zezao");
-	ScavTrap C3(C2);
-	ScavTrap C4 = C1;
-	ClapTrap C5("Zezato");
-	ClapTrap C6("Porra");
-	int	i = 0;
-	
-	C1.attack("Zezao");
-	while (i < 10) {
-		C1.attack("Zezinho");
-		i++;
-	}
-}
+class ScavTrap: private ClapTrap {
+	public:
+		ScavTrap();
+		ScavTrap(const std::string name);
+		~ScavTrap();
+		ScavTrap(const ScavTrap& src);
+		ScavTrap &operator=(const ScavTrap& src);
+		void guardGate();
+		void attack(const std::string& target);
+};
