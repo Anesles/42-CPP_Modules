@@ -6,7 +6,7 @@
 #    By: brumarti <brumarti@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/16 14:41:55 by brumarti          #+#    #+#              #
-#    Updated: 2024/01/16 15:57:59 by brumarti         ###   ########.fr        #
+#    Updated: 2024/01/16 16:44:10 by brumarti         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,5 +44,6 @@ fclean: clean
 
 re: clean all
 
-run: all clean
+run: all
 	clear && ./$(NAME)
+	make fclean
