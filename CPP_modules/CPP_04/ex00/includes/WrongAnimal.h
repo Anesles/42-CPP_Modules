@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.h                                           :+:      :+:    :+:   */
+/*   WrongAnimal.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: brumarti <brumarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 17:52:14 by brumarti          #+#    #+#             */
-/*   Updated: 2024/03/19 16:58:40 by brumarti         ###   ########.fr       */
+/*   Updated: 2024/03/19 16:52:13 by brumarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_H
-# define ANIMAL_H
+#ifndef WRONGANIMAL_H
+# define WRONGANIMAL_H
 
 #include <string>
 #include <iostream>
 
-class Animal {
+class WrongAnimal {
 	public:
-		Animal();
-		virtual ~Animal();
-		Animal(const Animal &src);
-		Animal&operator=(const Animal &src);
+		WrongAnimal();
+		~WrongAnimal();
+		WrongAnimal(const WrongAnimal &src);
+		WrongAnimal&operator=(const WrongAnimal &src);
 
 		std::string getType() const;
 		
-		virtual void makeSound() const;
+		void makeSound() const;
 	protected:
 		std::string type;
 };

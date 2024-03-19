@@ -6,7 +6,7 @@
 #    By: brumarti <brumarti@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/16 17:51:12 by brumarti          #+#    #+#              #
-#    Updated: 2024/01/16 17:51:24 by brumarti         ###   ########.fr        #
+#    Updated: 2024/03/19 16:59:49 by brumarti         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ VPATH = srcs
 
 NAME = ex00
 
-GENERAL = 
+GENERAL = Animal Cat Dog WrongAnimal WrongCat
 
 SRC = $(addsuffix .cpp, $(GENERAL)) \
 		main.cpp
