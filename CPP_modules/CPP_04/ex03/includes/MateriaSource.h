@@ -6,7 +6,7 @@
 /*   By: brumarti <brumarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 16:30:24 by brumarti          #+#    #+#             */
-/*   Updated: 2024/04/09 16:48:02 by brumarti         ###   ########.fr       */
+/*   Updated: 2024/04/18 16:49:09 by brumarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class MateriaSource : public IMateriaSource {
 		MateriaSource(const MateriaSource &src);
 		MateriaSource& operator=(const MateriaSource& other);
 
-		void learnMateria(AMateria*);
+		void learnMateria(AMateria* materia);
 		AMateria* createMateria(std::string const &type);
 };
 

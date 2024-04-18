@@ -6,7 +6,7 @@
 /*   By: brumarti <brumarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 15:35:13 by brumarti          #+#    #+#             */
-/*   Updated: 2024/04/09 17:43:41 by brumarti         ###   ########.fr       */
+/*   Updated: 2024/04/18 15:39:37 by brumarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ class AMateria {
 		std::string const & getType() const; //Retruns the materia type
 
 		virtual AMateria* clone() const = 0;
-		virtual void use(ICharacter& target);
+		virtual void use(ICharacter& target) = 0;
 };
 
 #endif
