@@ -6,14 +6,14 @@
 /*   By: brumarti <brumarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 15:31:29 by brumarti          #+#    #+#             */
-/*   Updated: 2024/04/18 16:16:25 by brumarti         ###   ########.fr       */
+/*   Updated: 2024/04/23 17:16:16 by brumarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cure.h"
 
-Cure::Cure() {
-	std::cout << "Cure constructor called" << std::endl;		
+Cure::Cure(void) : AMateria("cure") {
+	std::cout << "Cure constructor called" << std::endl;
 }
 
 Cure::~Cure() {

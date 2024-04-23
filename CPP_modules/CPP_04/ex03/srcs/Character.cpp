@@ -6,18 +6,30 @@
 /*   By: brumarti <brumarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 17:25:43 by brumarti          #+#    #+#             */
-/*   Updated: 2024/04/09 18:08:57 by brumarti         ###   ########.fr       */
+/*   Updated: 2024/04/23 17:23:25 by brumarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Character.h"
 
 Character::Character() : _name("Romeu"){
+	int i = 0;
+	for (i = 0; i < 4; i++){
+		this->_inventory[i] = NULL;
+	}
+	for (i = 0; i < 512; i++){
+		this->_floor[i] = NULL;
+	}
 	std::cout << "Character constructor called" << std::endl;
 }
 
+Character::Character(std::string name) : _name(name) {
+	std::cout << "Character name constructor called" << std::endl;
+}
+
 Character::~Character() {
-	for(int i = 0; i < 4; i++) {
+	int i = 0;
+	for(i = 0; i < 4; i++) {
 		delete this->_inventory[i];
 	}
 	std::cout << "Character destructor called" << std::endl;
@@ -58,8 +70,10 @@ std::string const & Character::getName() const{
 
 void Character::equip(AMateria* m) {
 	for (int i = 0; i < 4; i++) {
-		if (!this->_inventory[i])
+		if (!this->_inventory[i]) {
 			this->_inventory[i] = m;
+			return ;
+		}
 		else if (i == 4)
 			std::cout << "Inventory is full";
 	} 
@@ -73,12 +87,10 @@ void Character::unequip(int idx){
 		if (i < 512) {
 			this->_floor[i] =  this->_inventory[idx];
 			this->_inventory[idx] = NULL;
-		} else {
+		} else
 			std::cout << "Daam, the floor is full" << std::endl;
-		}
-	} else {
+	} else
 		std::cout << "The index is out of range" << std::endl;
-	}
 }
 
 void	Character::use(int idx, ICharacter& target) {

@@ -6,7 +6,7 @@
 /*   By: brumarti <brumarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 15:49:47 by brumarti          #+#    #+#             */
-/*   Updated: 2024/04/09 15:57:47 by brumarti         ###   ########.fr       */
+/*   Updated: 2024/04/23 17:01:59 by brumarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 #include <string>
 #include "AMateria.h"
+
+class AMateria;
 
 class ICharacter {
 	public:

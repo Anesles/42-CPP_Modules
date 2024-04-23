@@ -6,7 +6,7 @@
 /*   By: brumarti <brumarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 16:14:10 by brumarti          #+#    #+#             */
-/*   Updated: 2024/04/09 16:28:03 by brumarti         ###   ########.fr       */
+/*   Updated: 2024/04/23 16:53:22 by brumarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ class Character : public ICharacter {
 		AMateria*	_floor[512];
 	public:
 		Character();
+		Character(std::string name);
 		~Character();
 
 		Character(const Character & src);

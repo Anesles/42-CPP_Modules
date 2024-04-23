@@ -6,7 +6,7 @@
 #    By: brumarti <brumarti@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/16 17:51:12 by brumarti          #+#    #+#              #
-#    Updated: 2024/04/09 15:33:48 by brumarti         ###   ########.fr        #
+#    Updated: 2024/04/23 17:01:38 by brumarti         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ VPATH = srcs
 
 NAME = ex03
 
-GENERAL =
+GENERAL = AMateria Cure Ice MateriaSource Character
 
 SRC = $(addsuffix .cpp, $(GENERAL)) \
 		main.cpp

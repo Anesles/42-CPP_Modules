@@ -6,13 +6,13 @@
 /*   By: brumarti <brumarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 15:43:06 by brumarti          #+#    #+#             */
-/*   Updated: 2024/04/18 16:16:45 by brumarti         ###   ########.fr       */
+/*   Updated: 2024/04/23 17:16:34 by brumarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Ice.h"
 
-Ice::Ice() {
+Ice::Ice(void) : AMateria("ice") {
 	std::cout << "Ice constructor called" << std::endl;
 }
 

@@ -6,7 +6,7 @@
 /*   By: brumarti <brumarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 15:56:51 by brumarti          #+#    #+#             */
-/*   Updated: 2024/04/18 16:54:04 by brumarti         ###   ########.fr       */
+/*   Updated: 2024/04/23 17:09:50 by brumarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ void MateriaSource::learnMateria(AMateria* materia) {
 	for(i = 0; i < 4; i++) {
 		if(this->_learnt[i] == NULL) {
 			this->_learnt[i] = materia;
+			std::cout << "Learnt " << materia->getType() <<std::endl;
 			break;
 		}
 	}
@@ -56,10 +57,11 @@ AMateria* MateriaSource::createMateria(std::string const &type){
 	
 	for(i = 0; i < 4; i++) {
 		if(this->_learnt[i]) {
-			if (this->_learnt[i]._type == type)
-				return (this->_learnt[i].clone());
+			if (this->_learnt[i]->getType() == type)
+				return (this->_learnt[i]->clone());
 		}
 	}
 	if (i == 4)
 		std::cout << "Invalid type " << type <<std::endl;
+	return (NULL);
 }

@@ -6,7 +6,7 @@
 /*   By: brumarti <brumarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 16:49:39 by brumarti          #+#    #+#             */
-/*   Updated: 2024/04/09 17:44:46 by brumarti         ###   ########.fr       */
+/*   Updated: 2024/04/23 17:02:47 by brumarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,5 @@ std::string const & AMateria::getType() const{
 AMateria& AMateria::operator=(const AMateria &other) {
 	this->_type = other._type;
 	std::cout << "Materia copy assignement called" << std::endl;
+	return (*this);
 }

@@ -6,7 +6,7 @@
 /*   By: brumarti <brumarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 15:35:13 by brumarti          #+#    #+#             */
-/*   Updated: 2024/04/18 15:39:37 by brumarti         ###   ########.fr       */
+/*   Updated: 2024/04/23 17:03:58 by brumarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 # include "ICharacter.h"
 # include <iostream>
 # include <string>
+
+class ICharacter;
 
 class AMateria {
 	protected:
