@@ -6,7 +6,7 @@
 /*   By: brumarti <brumarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 15:43:06 by brumarti          #+#    #+#             */
-/*   Updated: 2024/04/23 17:16:34 by brumarti         ###   ########.fr       */
+/*   Updated: 2024/04/23 17:26:21 by brumarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Ice::~Ice() {
 	std::cout << "Ice destructor called" << std::endl;
 }
 
-Ice::Ice(Ice const & src) {
+Ice::Ice(Ice const & src) : AMateria(src){
 	*this = src;
 	std::cout << "Ice copy constructor called" << std::endl;
 }

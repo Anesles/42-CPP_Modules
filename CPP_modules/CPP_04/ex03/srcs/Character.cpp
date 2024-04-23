@@ -6,7 +6,7 @@
 /*   By: brumarti <brumarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 17:25:43 by brumarti          #+#    #+#             */
-/*   Updated: 2024/04/23 17:23:25 by brumarti         ###   ########.fr       */
+/*   Updated: 2024/04/23 17:29:53 by brumarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,11 @@ Character::Character(std::string name) : _name(name) {
 
 Character::~Character() {
 	int i = 0;
-	for(i = 0; i < 4; i++) {
+	while (this->_inventory[i])
 		delete this->_inventory[i];
-	}
+	i = 0;
+	while(this->_floor[i])
+		delete this->_floor[i];
 	std::cout << "Character destructor called" << std::endl;
 }
 
