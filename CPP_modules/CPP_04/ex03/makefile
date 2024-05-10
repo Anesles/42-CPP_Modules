@@ -6,12 +6,12 @@
 #    By: brumarti <brumarti@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/16 17:51:12 by brumarti          #+#    #+#              #
-#    Updated: 2024/04/23 17:01:38 by brumarti         ###   ########.fr        #
+#    Updated: 2024/05/10 14:41:02 by brumarti         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = c++
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+CFLAGS = -Wall -Wextra -Werror -std=c++98 -g
 INCLUDE = -I./includes
 VPATH = srcs
 
