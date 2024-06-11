@@ -1,18 +1,18 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
+#    makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: brumarti <brumarti@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 11:16:34 by brumarti          #+#    #+#              #
-#    Updated: 2023/09/19 14:45:02 by brumarti         ###   ########.fr        #
+#    Updated: 2024/06/11 18:05:56 by brumarti         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = account
 CC = c++
-FLAGS = -Wall -Wextra -Werror -std=c++98 -I./inc -g
+FLAGS = -Wall -Wextra -Werror -std=c++98 -I./inc
 
 SRCS = tests.cpp \
 		srcs/Account.cpp
