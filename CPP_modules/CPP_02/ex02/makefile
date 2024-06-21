@@ -6,12 +6,12 @@
 #    By: brumarti <brumarti@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/03 18:25:25 by brumarti          #+#    #+#              #
-#    Updated: 2023/12/19 15:43:15 by brumarti         ###   ########.fr        #
+#    Updated: 2024/06/19 19:40:08 by brumarti         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = c++
-CFLAGS = -Wall -Wextra -Werror -std=c++98 -g -fsanitize=address
+CFLAGS = -Wall -Wextra -Werror -std=c++98
 INCLUDE = -I./includes
 VPATH = srcs
 

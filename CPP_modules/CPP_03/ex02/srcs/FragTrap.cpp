@@ -6,13 +6,13 @@
 /*   By: brumarti <brumarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 17:34:49 by brumarti          #+#    #+#             */
-/*   Updated: 2024/01/16 17:40:53 by brumarti         ###   ########.fr       */
+/*   Updated: 2024/06/20 18:41:34 by brumarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.h"
 
-FragTrap::FragTrap() : ScavTrap(){
+FragTrap::FragTrap() : ClapTrap(){
 	this->_hitp = 100;
 	this->_enep = 100;
 	this->_atad = 30;
@@ -23,14 +23,14 @@ FragTrap::~FragTrap() {
 	std::cout << "FragTrap " << this->_name << " destroyed !\n";
 }
 
-FragTrap::FragTrap(const std::string name) : ScavTrap(name) {
+FragTrap::FragTrap(const std::string name) : ClapTrap(name) {
 	this->_hitp = 100;
 	this->_enep = 100;
 	this->_atad = 30;
 	std::cout << "FragTrap " << this->_name << " created using name!\n";
 }
 
-FragTrap::FragTrap(const FragTrap &src) : ScavTrap(src){
+FragTrap::FragTrap(const FragTrap &src) : ClapTrap(src){
 	std::cout << "FragTrap " << this->_name << " created using copy constructor!\n";
 }
 

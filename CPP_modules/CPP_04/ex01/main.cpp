@@ -6,7 +6,7 @@
 /*   By: brumarti <brumarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 16:43:31 by brumarti          #+#    #+#             */
-/*   Updated: 2024/04/02 17:18:17 by brumarti         ###   ########.fr       */
+/*   Updated: 2024/06/21 18:56:03 by brumarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int main() {
 
     const Animal* k(i);
 
-    delete j;//should not create a leak
+    delete j;
     delete i;
     delete k;
 

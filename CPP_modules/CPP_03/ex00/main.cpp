@@ -6,7 +6,7 @@
 /*   By: brumarti <brumarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 14:42:56 by brumarti          #+#    #+#             */
-/*   Updated: 2024/01/16 16:24:44 by brumarti         ###   ########.fr       */
+/*   Updated: 2024/06/20 18:27:27 by brumarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ int	main(void) {
 	
 	C1.attack("Zezao");
 	C2.takeDamage(5);
+	C2.beRepaired(5);
 	C5.takeDamage(10);
 	C6.takeDamage(5);
 	C6.takeDamage(5);

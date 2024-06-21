@@ -6,11 +6,12 @@
 /*   By: brumarti <brumarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 14:42:56 by brumarti          #+#    #+#             */
-/*   Updated: 2024/01/16 17:40:53 by brumarti         ###   ########.fr       */
+/*   Updated: 2024/06/20 19:30:12 by brumarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.h"
+#include "ScavTrap.h"
 
 int	main(void) {
 	std::cout << "### TESTING CLAPTRAP ###\n" << std::endl;

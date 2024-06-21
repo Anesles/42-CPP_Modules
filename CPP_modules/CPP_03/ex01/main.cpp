@@ -6,7 +6,7 @@
 /*   By: brumarti <brumarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 14:42:56 by brumarti          #+#    #+#             */
-/*   Updated: 2024/01/16 17:21:03 by brumarti         ###   ########.fr       */
+/*   Updated: 2024/06/20 19:21:01 by brumarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,11 @@ int	main(void) {
 	ClapTrap C6("Porra");
 	int	i = 0;
 	
-	C1.attack("Zezao");
+	C5.attack("Zezao");
 	while (i < 10) {
 		C1.attack("Zezinho");
 		i++;
 	}
+
+	C1.guardGate();
 }

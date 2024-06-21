@@ -6,7 +6,7 @@
 /*   By: brumarti <brumarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 14:51:15 by brumarti          #+#    #+#             */
-/*   Updated: 2024/01/16 17:42:15 by brumarti         ###   ########.fr       */
+/*   Updated: 2024/06/20 19:24:39 by brumarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ void ClapTrap::takeDamage(unsigned int amount) {
 		std::cout << this->_name << " is already dead !\n";
 }
 
-void ClapTrap::beRepaired(unsigned amount) {
+void ClapTrap::beRepaired(unsigned int amount) {
 	if (this->_hitp > 0 && this->_enep > 0){
 		std::cout << "ClapTrap " << this->_name << " got " << amount << " energy points !\n";
 		this->_enep += amount;

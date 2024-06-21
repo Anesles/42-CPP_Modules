@@ -6,7 +6,7 @@
 /*   By: brumarti <brumarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 15:25:24 by brumarti          #+#    #+#             */
-/*   Updated: 2023/12/19 16:19:45 by brumarti         ###   ########.fr       */
+/*   Updated: 2024/06/20 18:23:28 by brumarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,21 @@ int main( void ) {
 	std::cout << a << std::endl;
 	std::cout << a++ << std::endl;
 	std::cout << a << std::endl;
+	std::cout << --a << std::endl;
+	std::cout << a << std::endl;
+	std::cout << a-- << std::endl;
+	std::cout << a << std::endl;
 	
 	std::cout << b << std::endl;
 	
 	std::cout << Fixed::max( a, b ) << std::endl;
-	
+	std::cout << (a < b) << std::endl;
+	std::cout << (a > b) << std::endl;
+	std::cout << (a <= b) << std::endl;
+	std::cout << (a >= b) << std::endl;
+	std::cout << (a == b) << std::endl;
+	std::cout << (a != b) << std::endl;
+	std::cout << Fixed::min( a, b ) << std::endl;
+
 	return 0;
 }
