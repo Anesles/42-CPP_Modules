@@ -6,7 +6,7 @@
 /*   By: brumarti <brumarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 16:43:31 by brumarti          #+#    #+#             */
-/*   Updated: 2024/06/21 18:56:03 by brumarti         ###   ########.fr       */
+/*   Updated: 2024/06/24 23:04:57 by brumarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int main() {
     const Animal* j = new Dog();
     const Animal* i = new Cat();
 
-    const Animal* k(i);
+    const Animal* k(j);
 
     delete j;
     delete i;

@@ -6,7 +6,7 @@
 /*   By: brumarti <brumarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 16:41:07 by brumarti          #+#    #+#             */
-/*   Updated: 2024/03/19 16:55:22 by brumarti         ###   ########.fr       */
+/*   Updated: 2024/06/24 22:56:40 by brumarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ WrongCat::~WrongCat() {
     std::cout << "Called destructor for WrongCat.\n";
 }
 
-WrongCat::WrongCat(const WrongCat& src) {
+WrongCat::WrongCat(const WrongCat& src) : WrongAnimal(src){
     this->type = src.type;
     std::cout << "Copy constructor for WrongCat.\n";
 }

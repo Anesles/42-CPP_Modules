@@ -6,13 +6,13 @@
 /*   By: brumarti <brumarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 16:41:07 by brumarti          #+#    #+#             */
-/*   Updated: 2024/04/02 15:38:34 by brumarti         ###   ########.fr       */
+/*   Updated: 2024/06/24 22:55:57 by brumarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.h"
 
-Cat::Cat() {
+Cat::Cat(){
     this->type = "Cat";
     std::cout << "Called constructor for cat.\n";
 }
@@ -21,7 +21,7 @@ Cat::~Cat() {
     std::cout << "Called destructor for cat.\n";
 }
 
-Cat::Cat(const Cat& src) {
+Cat::Cat(const Cat& src) : Animal(src){
     this->type = src.type;
     std::cout << "Copy constructor for cat.\n";
 }

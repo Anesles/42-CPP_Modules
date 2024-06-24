@@ -6,7 +6,7 @@
 /*   By: brumarti <brumarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 16:41:10 by brumarti          #+#    #+#             */
-/*   Updated: 2024/04/02 15:48:34 by brumarti         ###   ########.fr       */
+/*   Updated: 2024/06/24 23:07:56 by brumarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,16 +23,19 @@ Dog::~Dog() {
     std::cout << "Called destructor for dog.\n";
 }
 
-Dog::Dog(const Dog& src) {
+Dog::Dog(const Dog& src) : Animal(src){
     this->type = src.type;
-    this->brain = src.brain;
+    this->brain = new Brain(*src.brain);
     std::cout << "Copy constructor for dog.\n";
 }
 
 Dog& Dog::operator=(const Dog& src) {
-    this->type = src.type;
-    this->brain = src.brain;
-    std::cout << "Copy assignment for dog.\n";
+	if (this != &src) {
+		delete this->brain;
+		this->brain = new Brain(*src.brain);
+		this->type = src.type;
+		std::cout << "Copy assignment for dog.\n";
+	}
     return (*this);
 }
 

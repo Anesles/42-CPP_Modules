@@ -6,7 +6,7 @@
 /*   By: brumarti <brumarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 17:54:37 by brumarti          #+#    #+#             */
-/*   Updated: 2024/03/19 16:50:06 by brumarti         ###   ########.fr       */
+/*   Updated: 2024/06/24 23:41:08 by brumarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,16 @@ Animal& Animal::operator=(const Animal& src){
 }
 
 Animal::Animal(const Animal& src) {
-	this->type = src.type;
 	std::cout << "Copy constructor for animal.\n";
+	this->type = src.type;
 }
 
 std::string Animal::getType() const {
 	return (this->type);
+}
+
+void Animal::setType(std::string type) {
+	this->type = type;
 }
 
 void Animal::makeSound() const {

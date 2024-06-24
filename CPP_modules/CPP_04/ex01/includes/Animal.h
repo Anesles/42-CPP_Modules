@@ -6,7 +6,7 @@
 /*   By: brumarti <brumarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 17:52:14 by brumarti          #+#    #+#             */
-/*   Updated: 2024/03/19 16:58:40 by brumarti         ###   ########.fr       */
+/*   Updated: 2024/06/24 23:40:53 by brumarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ class Animal {
 		Animal&operator=(const Animal &src);
 
 		std::string getType() const;
+		void setType(std::string type);
 		
 		virtual void makeSound() const;
 	protected:
