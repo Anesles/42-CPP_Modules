@@ -6,7 +6,7 @@
 /*   By: brumarti <brumarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 16:40:20 by brumarti          #+#    #+#             */
-/*   Updated: 2024/04/02 15:34:13 by brumarti         ###   ########.fr       */
+/*   Updated: 2024/06/25 00:42:28 by brumarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ class Dog : public Animal {
         Dog(const Dog &src);
         Dog&operator=(const Dog &src);
         void makeSound() const;
+        Brain *getBrain() const;
     private:
         Brain *brain;
 };

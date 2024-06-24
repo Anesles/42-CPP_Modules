@@ -6,31 +6,36 @@
 /*   By: brumarti <brumarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 16:41:07 by brumarti          #+#    #+#             */
-/*   Updated: 2024/06/24 23:41:45 by brumarti         ###   ########.fr       */
+/*   Updated: 2024/06/25 00:51:27 by brumarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.h"
 
-Cat::Cat() {
+Cat::Cat()
+{
     this->type = "Cat";
     this->brain = new Brain();
     std::cout << "Called constructor for cat.\n";
 }
 
-Cat::~Cat() {
+Cat::~Cat()
+{
     delete this->brain;
     std::cout << "Called destructor for cat.\n";
 }
 
-Cat::Cat(const Cat& src) : Animal(src){
+Cat::Cat(const Cat &src) : Animal(src)
+{
     this->type = src.type;
     this->brain = new Brain(*src.brain);
     std::cout << "Copy constructor for cat.\n";
 }
 
-Cat& Cat::operator=(const Cat& src) {
-    if (this != &src) {
+Cat &Cat::operator=(const Cat &src)
+{
+    if (this != &src)
+    {
         delete this->brain;
         this->brain = new Brain(*src.brain);
         this->type = src.type;
@@ -39,6 +44,12 @@ Cat& Cat::operator=(const Cat& src) {
     return (*this);
 }
 
-void Cat::makeSound() const {
+void Cat::makeSound() const
+{
     std::cout << "Cat goes meow meow.\n";
+}
+
+Brain *Cat::getBrain() const
+{
+    return (this->brain);
 }
