@@ -6,7 +6,7 @@
 /*   By: brumarti <brumarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 16:43:31 by brumarti          #+#    #+#             */
-/*   Updated: 2024/03/19 17:00:10 by brumarti         ###   ########.fr       */
+/*   Updated: 2024/06/25 01:46:17 by brumarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int main()
     std::cout << dog->getType() << " " << std::endl;
     std::cout << cat->getType() << " " << std::endl;
     
-    dog->makeSound(); //will output the cat sound!
+    dog->makeSound();
     cat->makeSound();
     meta->makeSound();
 
@@ -37,7 +37,7 @@ int main()
     const WrongAnimal* wrongCat = new WrongCat();
 
     std::cout << wrongCat->getType() << " " << std::endl;
-    wrongCat->makeSound(); //will output the random sound
+    wrongCat->makeSound();
     
     delete wrongCat;
 
