@@ -6,7 +6,7 @@
 /*   By: brumarti <brumarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 16:41:07 by brumarti          #+#    #+#             */
-/*   Updated: 2024/06/25 01:15:45 by brumarti         ###   ########.fr       */
+/*   Updated: 2024/06/25 01:42:13 by brumarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ Cat &Cat::operator=(const Cat &src)
     if (this == &src)
         return (*this);
     this->type = src.type;
+    delete this->brain;
     this->brain = new Brain(*src.brain);
     std::cout << "Copy assignment for cat.\n";
     return (*this);
