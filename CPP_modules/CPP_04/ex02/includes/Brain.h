@@ -6,7 +6,7 @@
 /*   By: brumarti <brumarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/02 15:30:24 by brumarti          #+#    #+#             */
-/*   Updated: 2024/04/02 17:18:02 by brumarti         ###   ########.fr       */
+/*   Updated: 2024/06/25 01:05:49 by brumarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ class Brain{
         ~Brain();
         Brain(const Brain &src);
         Brain&operator=(const Brain &src);
-    private:
         std::string ideas[100];
 };
 
