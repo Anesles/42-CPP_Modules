@@ -6,7 +6,7 @@
 /*   By: brumarti <brumarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 15:31:29 by brumarti          #+#    #+#             */
-/*   Updated: 2024/04/23 17:26:49 by brumarti         ###   ########.fr       */
+/*   Updated: 2024/06/25 01:24:14 by brumarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ Cure::Cure(Cure const & src) : AMateria(src) {
 }
 
 Cure& Cure::operator=(Cure const &other) {
+	if (this == &other)
+		return(*this);
 	this->_type = other._type;
 	std::cout << "Cure copy assignement called" << std::endl;
 	return(*this);

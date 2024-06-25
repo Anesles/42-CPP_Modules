@@ -6,7 +6,7 @@
 /*   By: brumarti <brumarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 15:43:06 by brumarti          #+#    #+#             */
-/*   Updated: 2024/04/23 17:26:21 by brumarti         ###   ########.fr       */
+/*   Updated: 2024/06/25 01:24:20 by brumarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ Ice::Ice(Ice const & src) : AMateria(src){
 }
 
 Ice& Ice::operator=(Ice const &other) {
+	if (this == &other)
+		return(*this);
 	this->_type = other._type;
 	std::cout << "Ice copy assignement called" << std::endl;
 	return(*this);

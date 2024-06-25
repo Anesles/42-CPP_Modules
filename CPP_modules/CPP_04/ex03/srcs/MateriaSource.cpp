@@ -6,7 +6,7 @@
 /*   By: brumarti <brumarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 15:56:51 by brumarti          #+#    #+#             */
-/*   Updated: 2024/05/10 14:27:11 by brumarti         ###   ########.fr       */
+/*   Updated: 2024/06/25 01:37:22 by brumarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ MateriaSource::MateriaSource(const MateriaSource& other) {
 }
 
 MateriaSource& MateriaSource::operator=(const MateriaSource &other) {
+	if (this == &other)
+		return (*this);
 	for(int i = 0; i < 4; i++) {
 		if (this->_learnt[i])
 			delete this->_learnt[i];
@@ -48,8 +50,10 @@ void MateriaSource::learnMateria(AMateria* materia) {
 			break;
 		}
 	}
-	if (i == 4)
+	if (i == 4) {
 		std::cout << "Max materia learnt" << std::endl;
+		delete materia;
+	}
 }
 
 AMateria* MateriaSource::createMateria(std::string const &type){
