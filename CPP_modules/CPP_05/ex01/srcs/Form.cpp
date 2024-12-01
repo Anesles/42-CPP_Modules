@@ -80,13 +80,11 @@ const char* Form::GradeTooLowException::what() const throw() {
 	return "Grade is too low !";
 }
 
-void Form::beSigned(Bureaucrat bur) {
+void Form::beSigned(Bureaucrat const & bur) {
 	if(bur.getGrade() <= this->getSignGrade()) {
 		this->setSigned(true);
-		bur.signForm(*this);
 	} else {
 		throw Form::GradeTooLowException();
-		bur.signForm(*this);
 	}
 }
 

@@ -41,7 +41,7 @@ class Bureaucrat
 		};
 
 		void checkGrade(int grade);
-		void signForm(Form const & form);
+		void signForm(Form & form);
 		
 		std::string getName() const;
 		int getGrade() const;

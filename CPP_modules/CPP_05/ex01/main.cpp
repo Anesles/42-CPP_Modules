@@ -55,8 +55,9 @@ int main() {
     std::cout << f1.getName() << " is " << (f1.getSigned() ? "signed" : "not signed") << std::endl;
 
     // Test Form exceptions
+    Bureaucrat b4;
     try {
-        f1.beSigned(b1);
+        f1.beSigned(b4);
     } catch (std::exception &e) {
         std::cout << e.what() << std::endl;
     }

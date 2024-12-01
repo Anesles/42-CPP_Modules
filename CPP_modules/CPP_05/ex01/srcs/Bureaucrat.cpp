@@ -59,14 +59,14 @@ void Bureaucrat::checkGrade(int grade)
 }
 
 void Bureaucrat::incrementGrade() {
-	int newGrade = this->_grade--;
+	int newGrade = (this->getGrade() - 1);
 
 	checkGrade(newGrade);
 	this->_grade = newGrade;
 }
 
 void Bureaucrat::decrementGrade() {
-	int newGrade = this->_grade++;
+	int newGrade = (this->getGrade() + 1);
 
 	checkGrade(newGrade);
 	this->_grade = newGrade;
@@ -82,11 +82,21 @@ const char *Bureaucrat::GradeTooLowException::what() const throw()
 	return "Grade is too low";
 }
 
-void Bureaucrat::signForm(Form const & form) {
+void Bureaucrat::signForm(Form & form) {
 	if (form.getSigned() == true) {
-		std::cout << this->getName() << " signed " << form.getName() << std::endl;
+		std::cout << "Formn " << form.getName() << " is already signed." << std::endl;
 	} else {
-		std::cout << this->getName() << " couldn't sign " << form.getName() << " because his grade was too low !" << std::endl;
+		try
+		{
+			form.beSigned(*this);
+			std::cout << this->getName() << " signed form " << form.getName() << std::endl;
+		}
+		catch(const std::exception& e)
+		{
+
+			std::cerr << this->getName() << " couldn't sign form " << form.getName() << " because: " << e.what() << std::endl;
+		}
+		
 	}
 }
 

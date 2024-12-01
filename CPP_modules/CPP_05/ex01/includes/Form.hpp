@@ -36,7 +36,7 @@ class Form
 		int	getSignGrade() const;
 		int	getExecuteGrade() const;
 
-		void beSigned(Bureaucrat bur);
+		void beSigned(Bureaucrat const & bur);
 
 	private:
 
