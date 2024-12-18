@@ -11,7 +11,10 @@
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
-#include "Form.hpp"
+#include "AForm.hpp"
+#include "ShrubberyCreationForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "PresidentialPardonForm.hpp"
 
 int main() {
     // Test Bureaucrat constructors
@@ -41,29 +44,20 @@ int main() {
         std::cout << e.what() << std::endl;
     }
 
-    // Test Form constructors
-    Form f1;
-    Form f2("Form1", false, 50, 100);
-    Form f3(f2);
+    // Test AForm constructors
+    ShrubberyCreationForm f1("home");
+    RobotomyRequestForm f2("robot");
+    PresidentialPardonForm f3("criminal");
 
-    // Test Form assignment operator
-    f1 = f2;
+    // Test AForm methods
+    b2.signForm(f1);
+    b2.executeForm(f1);
 
-    // Test Form methods
-    std::cout << f1.getName() << " is " << (f1.getSigned() ? "signed" : "not signed") << std::endl;
-    f1.setSigned(true);
-    std::cout << f1.getName() << " is " << (f1.getSigned() ? "signed" : "not signed") << std::endl;
-
-    // Test Form exceptions
-    Bureaucrat b4;
-    try {
-        f1.beSigned(b4);
-    } catch (std::exception &e) {
-        std::cout << e.what() << std::endl;
-    }
-
-    // Test Bureaucrat signing a form
     b2.signForm(f2);
+    b2.executeForm(f2);
+
+    b2.signForm(f3);
+    b2.executeForm(f3);
 
     return 0;
 }

@@ -17,7 +17,7 @@ VPATH = srcs
 
 NAME = ex02
 
-GENERAL = Bureaucrat Form
+GENERAL = Bureaucrat AForm ShrubberyCreationForm RobotomyRequestForm PresidentialPardonForm
 
 SRC = $(addsuffix .cpp, $(GENERAL)) \
 		main.cpp

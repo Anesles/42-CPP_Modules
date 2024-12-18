@@ -15,9 +15,9 @@
 
 # include <iostream>
 # include <string>
-# include "Form.hpp"
+# include "AForm.hpp"
 
-class Form;
+class AForm;
 
 class Bureaucrat
 {
@@ -41,13 +41,15 @@ class Bureaucrat
 		};
 
 		void checkGrade(int grade);
-		void signForm(Form & form);
+		void signForm(AForm & form);
 		
 		std::string getName() const;
 		int getGrade() const;
 
 		void incrementGrade();
 		void decrementGrade();
+
+		void executeForm(AForm const & form);
 	private:
 		const std::string _name;
 		int _grade; 
@@ -55,4 +57,4 @@ class Bureaucrat
 
 std::ostream& operator<<(std::ostream& stream, Bureaucrat& bur);
 
-#endif /* ****************************************************** BUREAUCRAT_H */
+#endif
