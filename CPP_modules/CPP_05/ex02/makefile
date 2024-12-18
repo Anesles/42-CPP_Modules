@@ -15,7 +15,7 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98 -g -fsanitize=address
 INCLUDE = -I./includes
 VPATH = srcs
 
-NAME = ex01
+NAME = ex02
 
 GENERAL = Bureaucrat Form
 
