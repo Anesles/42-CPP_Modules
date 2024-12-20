@@ -11,13 +11,13 @@
 # **************************************************************************** #
 
 CC = c++
-CFLAGS = -Wall -Wextra -Werror -std=c++98 -g -fsanitize=address
+CFLAGS = -Wall -Wextra -Werror -std=c++98 -g
 INCLUDE = -I./includes
 VPATH = srcs
 
-NAME = ex02
+NAME = ex03
 
-GENERAL = Bureaucrat AForm ShrubberyCreationForm RobotomyRequestForm PresidentialPardonForm
+GENERAL = Bureaucrat AForm ShrubberyCreationForm RobotomyRequestForm PresidentialPardonForm Intern
 
 SRC = $(addsuffix .cpp, $(GENERAL)) \
 		main.cpp

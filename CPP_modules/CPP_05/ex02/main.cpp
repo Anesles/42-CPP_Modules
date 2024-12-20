@@ -19,7 +19,7 @@
 int main() {
     // Test Bureaucrat constructors
     Bureaucrat b1;
-    Bureaucrat b2("John", 42);
+    Bureaucrat b2("John", 2);
     Bureaucrat b3(b2);
 
     // Test Bureaucrat assignment operator
