@@ -17,7 +17,7 @@ VPATH = srcs
 
 NAME = ex02
 
-GENERAL =
+GENERAL = Base A B C
 
 SRC = $(addsuffix .cpp, $(GENERAL)) \
 		main.cpp
