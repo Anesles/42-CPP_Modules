@@ -38,7 +38,7 @@ void ScalarConverter::convert(const std::string& literal) {
         std::stringstream ss(literal);
         int i;
         ss >> i;
-        if (i < std::numeric_limits<char>::min() || i > std::numeric_limits<char>::max())
+        if (ss.fail() || i < std::numeric_limits<char>::min() || i > std::numeric_limits<char>::max())
             std::cout << "char: impossible" << std::endl;
         else if (std::isprint(static_cast<char>(i)))
             std::cout << "char: '" << static_cast<char>(i) << "'" << std::endl;
@@ -49,30 +49,40 @@ void ScalarConverter::convert(const std::string& literal) {
         std::cout << "double: " << static_cast<double>(i) << std::endl;
     } else if (isFloat(literal)) {
         float f = std::strtof(literal.c_str(), NULL);
-        if (f < std::numeric_limits<char>::min() || f > std::numeric_limits<char>::max())
+        if (std::isnan(f) || std::isinf(f)) {
             std::cout << "char: impossible" << std::endl;
-        else if (std::isprint(static_cast<char>(f)))
-            std::cout << "char: '" << static_cast<char>(f) << "'" << std::endl;
-        else
-            std::cout << "char: Non displayable" << std::endl;
-        if (f < std::numeric_limits<int>::min() || f > std::numeric_limits<int>::max())
             std::cout << "int: impossible" << std::endl;
-        else
-            std::cout << "int: " << static_cast<int>(f) << std::endl;
+        } else {
+            if (f < std::numeric_limits<char>::min() || f > std::numeric_limits<char>::max())
+                std::cout << "char: impossible" << std::endl;
+            else if (std::isprint(static_cast<char>(f)))
+                std::cout << "char: '" << static_cast<char>(f) << "'" << std::endl;
+            else
+                std::cout << "char: Non displayable" << std::endl;
+            if (f < std::numeric_limits<int>::min() || f > std::numeric_limits<int>::max())
+                std::cout << "int: impossible" << std::endl;
+            else
+                std::cout << "int: " << static_cast<int>(f) << std::endl;
+        }
         std::cout << "float: " << f << "f" << std::endl;
         std::cout << "double: " << static_cast<double>(f) << std::endl;
     } else if (isDouble(literal)) {
         double d = std::strtod(literal.c_str(), NULL);
-        if (d < std::numeric_limits<char>::min() || d > std::numeric_limits<char>::max())
+        if (std::isnan(d) || std::isinf(d)) {
             std::cout << "char: impossible" << std::endl;
-        else if (std::isprint(static_cast<char>(d)))
-            std::cout << "char: '" << static_cast<char>(d) << "'" << std::endl;
-        else
-            std::cout << "char: Non displayable" << std::endl;
-        if (d < std::numeric_limits<int>::min() || d > std::numeric_limits<int>::max())
             std::cout << "int: impossible" << std::endl;
-        else
-            std::cout << "int: " << static_cast<int>(d) << std::endl;
+        } else {
+            if (d < std::numeric_limits<char>::min() || d > std::numeric_limits<char>::max())
+                std::cout << "char: impossible" << std::endl;
+            else if (std::isprint(static_cast<char>(d)))
+                std::cout << "char: '" << static_cast<char>(d) << "'" << std::endl;
+            else
+                std::cout << "char: Non displayable" << std::endl;
+            if (d < std::numeric_limits<int>::min() || d > std::numeric_limits<int>::max())
+                std::cout << "int: impossible" << std::endl;
+            else
+                std::cout << "int: " << static_cast<int>(d) << std::endl;
+        }
         std::cout << "float: " << static_cast<float>(d) << "f" << std::endl;
         std::cout << "double: " << d << std::endl;
     } else {
