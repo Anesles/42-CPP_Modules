@@ -8,7 +8,6 @@ Data* Serializer::deserialize(uintptr_t raw) {
     return reinterpret_cast<Data*>(raw);
 }
 
-// Private constructor and destructor to prevent instantiation
 Serializer::Serializer() {}
 Serializer::Serializer(const Serializer&) {}
 Serializer& Serializer::operator=(const Serializer&) { return *this; }

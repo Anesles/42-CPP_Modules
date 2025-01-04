@@ -32,14 +32,28 @@ void identify(Base* p) {
 }
 
 void identify(Base& p) {
-    if (dynamic_cast<A*>(&p))
+    try {
+        A& a = dynamic_cast<A&>(p);
         std::cout << "Reference: A" << std::endl;
-    else if (dynamic_cast<B*>(&p))
-        std::cout << "Reference: B" << std::endl;
-    else if (dynamic_cast<C*>(&p))
-        std::cout << "Reference: C" << std::endl;
-    else
-        std::cout << "Reference: Unknown" << std::endl;
+        (void)a;
+    } catch (const std::exception &e) {
+		std::cout << e.what() << std::endl;
+        try {
+            B& b = dynamic_cast<B&>(p);
+            std::cout << "Reference: B" << std::endl;
+            (void)b;
+        } catch (const std::exception &e) {
+            std::cout << e.what() << std::endl;
+			try {
+                C& c = dynamic_cast<C&>(p);
+                std::cout << "Reference: C" << std::endl;
+                (void)c;
+            } catch (const std::exception &e) {
+				std::cout << e.what() << std::endl;
+                std::cout << "Reference: Unknown" << std::endl;
+            }
+        }
+    }
 }
 
 int main() {

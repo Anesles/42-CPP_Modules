@@ -16,7 +16,7 @@ void testSerialization(Data& data) {
 
 void testSerializationFailure(Data& data) {
     uintptr_t raw = Serializer::serialize(&data);
-    raw += 1; // Corrupt the serialized value
+    raw += 1;
     Data* deserializedData = Serializer::deserialize(raw);
 
     if (deserializedData == &data) {
