@@ -77,7 +77,12 @@ int main() {
             std::cout << "constArr[" << i << "] = " << constArr[i] << std::endl;
         }
 
-
+		// Copy from const array
+        Array<int> copiedFromConst(constArr);
+        std::cout << "copiedFromConst size: " << copiedFromConst.size() << std::endl;
+        for (unsigned int i = 0; i < copiedFromConst.size(); ++i) {
+            std::cout << "copiedFromConst[" << i << "] = " << copiedFromConst[i] << std::endl;
+        }
     } catch (const std::exception& e) {
         std::cerr << e.what() << std::endl;
     }
