@@ -59,6 +59,17 @@ int main() {
             std::cout << "arr5[" << i << "] = " << arr5[i] << std::endl;
         }
 
+        // Test with char
+        Array<char> arr6(4);
+        arr6[0] = 'a';
+        arr6[1] = 'b';
+        arr6[2] = 'c';
+        arr6[3] = 'd';
+        std::cout << "arr6 size: " << arr6.size() << std::endl;
+        for (unsigned int i = 0; i < arr6.size(); ++i) {
+            std::cout << "arr6[" << i << "] = " << arr6[i] << std::endl;
+        }
+
     } catch (const std::exception& e) {
         std::cerr << e.what() << std::endl;
     }

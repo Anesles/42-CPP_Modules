@@ -8,4 +8,4 @@ void iter(T* array, int length, void (*func)(T&)) {
     }
 }
 
-#endif // ITER_HPP
+#endif
