@@ -70,6 +70,14 @@ int main() {
             std::cout << "arr6[" << i << "] = " << arr6[i] << std::endl;
         }
 
+		// Test const array
+		const Array<int> constArr(5);
+        std::cout << "constArr size: " << constArr.size() << std::endl;
+        for (unsigned int i = 0; i < constArr.size(); ++i) {
+            std::cout << "constArr[" << i << "] = " << constArr[i] << std::endl;
+        }
+
+
     } catch (const std::exception& e) {
         std::cerr << e.what() << std::endl;
     }
