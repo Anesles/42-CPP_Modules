@@ -52,7 +52,6 @@ unsigned int Array<T>::size() const {
     return n;
 }
 
-// Explicit instantiation
 template class Array<int>;
 template class Array<float>;
 template class Array<double>;
