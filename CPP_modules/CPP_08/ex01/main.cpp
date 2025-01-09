@@ -1,6 +1,6 @@
-#include "Span.hpp"
 #include <iostream>
 #include <vector>
+#include "Span.hpp"
 
 int main() {
     // Test 1: Basic functionality

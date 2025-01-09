@@ -1,6 +1,9 @@
 #include <iostream>
 #include "MutantStack.hpp"
 
+#include <iostream>
+#include "MutantStack.hpp"
+
 int main() {
     {
         MutantStack<int> mstack;
@@ -73,5 +76,55 @@ int main() {
 
         std::stack<float> s(mstack);
     }
+
+    // Additional tests
+    {
+        // Test with double
+        MutantStack<double> mstack;
+        mstack.push(1.123);
+        mstack.push(2.234);
+        std::cout << "Top element: " << mstack.top() << std::endl;
+        mstack.pop();
+        std::cout << "Stack size after pop: " << mstack.size() << std::endl;
+        mstack.push(3.345);
+        mstack.push(4.456);
+        mstack.push(5.567);
+
+        MutantStack<double>::iterator it = mstack.begin();
+        MutantStack<double>::iterator ite = mstack.end();
+        std::cout << "Stack elements: ";
+        while (it != ite) {
+            std::cout << *it << " ";
+            ++it;
+        }
+        std::cout << std::endl;
+
+        std::stack<double> s(mstack);
+    }
+
+    {
+        // Test with char
+        MutantStack<char> mstack;
+        mstack.push('a');
+        mstack.push('b');
+        std::cout << "Top element: " << mstack.top() << std::endl;
+        mstack.pop();
+        std::cout << "Stack size after pop: " << mstack.size() << std::endl;
+        mstack.push('c');
+        mstack.push('d');
+        mstack.push('e');
+
+        MutantStack<char>::iterator it = mstack.begin();
+        MutantStack<char>::iterator ite = mstack.end();
+        std::cout << "Stack elements: ";
+        while (it != ite) {
+            std::cout << *it << " ";
+            ++it;
+        }
+        std::cout << std::endl;
+
+        std::stack<char> s(mstack);
+    }
+
     return 0;
 }
