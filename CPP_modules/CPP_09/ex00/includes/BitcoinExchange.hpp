@@ -21,4 +21,4 @@ private:
     float getExchangeRate(const std::string& date);
 };
 
-#endif // BITCOINEXCHANGE_HPP
+#endif

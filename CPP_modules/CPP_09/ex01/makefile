@@ -3,7 +3,7 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98 -g
 INCLUDE = -I./includes
 VPATH = srcs
 
-NAME = ex01
+NAME = RPN
 
 GENERAL = RPN
 

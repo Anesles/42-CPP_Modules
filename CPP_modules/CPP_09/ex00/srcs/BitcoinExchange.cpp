@@ -18,7 +18,7 @@ void BitcoinExchange::loadDatabase(const std::string& dbFile) {
     while (std::getline(file, line)) {
         if (isFirstLine) {
             isFirstLine = false;
-            continue; // Skip the header line
+            continue;
         }
         std::istringstream ss(line);
         std::string date;
@@ -60,12 +60,12 @@ void BitcoinExchange::evaluate(const std::string& inputFile) {
     while (std::getline(file, line)) {
         if (isFirstLine) {
             isFirstLine = false;
-            continue; // Skip the header line
+            continue;
         }
         std::istringstream ss(line);
         std::string date, valueStr;
         if (std::getline(ss, date, '|') && std::getline(ss, valueStr)) {
-            // Trim whitespace from date and valueStr
+            
             date.erase(date.find_last_not_of(" \n\r\t") + 1);
             valueStr.erase(0, valueStr.find_first_not_of(" \n\r\t"));
 
